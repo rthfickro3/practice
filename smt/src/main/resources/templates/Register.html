@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+
+    <link rel="stylesheet" href="animation/custom-animation.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <style>
+        p{
+            margin-top : -10px;
+            margin-left : 5px;
+            font-size: 12px;
+        }
+
+        .blank{
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="fadein" style="margin-top : 10%;width: 20%;">
+    <form acion="@{/Register.do}" method="post"modelAttribute="userDto">
+        <h1 style="font-weight: lighter;font-size: 46px; margin-bottom: 20px; text-align: center">회원가입 하세요!</h1>
+        <div class="form-group">
+            <input type="text" class="form-control" name="userName" th:value="${userDto.userName}" placeholder="이름" required="required">
+        </div>
+        <div class="blank">
+            <p th:text="${valid_userName}"></p>
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" name="userId" th:value="${userDto.userId}" placeholder="아이디"  required="required">
+        </div>
+        <div class="blank">
+            <p th:text="${valid_userId}"></p>
+        </div>
+
+        <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="비밀번호" required="required">
+        </div>
+        <div class="blank">
+            <p th:text="${valid_password}"></p>
+        </div>
+
+        <div class="form-group">
+            <input type="password" class="form-control" name="password_Check" placeholder="비밀번호 확인" required="required">
+        </div>
+        <div class="blank">
+            <p th:text="${valid_passwordNotEquals}"></p>
+        </div>
+
+        <div class="btn-group" style="float: right" >
+            <button type="submit" class="btn"style="text-align: right;">등록</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

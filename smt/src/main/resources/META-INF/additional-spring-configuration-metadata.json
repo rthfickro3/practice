@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "-Djava.security.egd",
+      "type": "java.lang.String",
+      "description": "Description for -Djava.security.egd."
+  }
+] }

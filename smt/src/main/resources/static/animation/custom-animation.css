@@ -1,0 +1,47 @@
+
+#fadein h1, div{
+    opacity: 0;
+    animation : fadein 1s ease-out;
+    animation-fill-mode: forwards;
+}
+#fadein h1{
+    animation-delay: 0.1s;
+}
+
+#fadein div:nth-child(1){
+    animation-delay: 0.3s;
+}
+#fadein div:nth-child(2){
+    animation-delay: 0.5s;
+}
+#fadein div:nth-child(3){
+    animation-delay: 0.7s;
+}
+#fadein div:nth-child(4){
+    animation-delay: 0.9s;
+}
+#fadein div:nth-child(5){
+    animation-delay: 1.1s;
+}
+#fadein div:nth-child(6){
+    animation-delay: 1.3s;
+}
+#fadein div:nth-child(7){
+    animation-delay: 1.5s;
+}
+#fadein div:nth-child(8){
+    animation-delay: 1.7s;
+}
+#fadein div:nth-child(9){
+    animation-delay: 1.9s;
+}
+@keyframes fadein {
+     from {
+         opacity: 0;
+         transform: translate3d(0, -5%, 0);
+     }
+     to {
+         opacity: 1;
+         transform: translate3d(0, 0, 0);
+     }
+ }
